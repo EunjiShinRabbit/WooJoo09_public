@@ -1,0 +1,995 @@
+@import "color.scss";
+
+
+.footer{
+  border-top: solid 1px #e3e9ed;
+  height: 90px;
+  padding: 30px 10vw 10px 10vw;
+  background-color: $lightGray2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  a{
+    padding-right: 20px;
+  }
+  p{
+    font-size: .7rem;
+  }
+}
+
+.mobileFooter{
+  display: none;
+}
+.unReg{
+  border-top: 1px solid #e3e9ed;
+}
+
+.memberrankimg{
+  height: 1.5rem;
+  margin-right: 5px;
+}
+
+.memberinfowrapper{
+  // margin-left: -10vw;
+  width: 100vw;
+  min-height: 100vh;
+  height: max-content;
+  // background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), 
+  // url("../resource/kirby_bg7.png");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.headerwrapper{
+  padding-left: 10vw;
+}
+
+.memberinfomain{
+  width: 90vw;
+  padding-left: 10vw;
+  padding-top: 150px;
+  min-height: 200px;
+  height: max-content;
+  display: grid;
+  grid-template-columns: minmax(200px, 350px) minmax(450px, auto);
+  gap: 5px;
+}
+
+.memberinfomain > .memberinfoheader{
+  // margin-top: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: fit-content;
+  border-radius: 10px;
+}
+
+.memberinfomain > .memberinfocenter{
+  // margin-top: 8%;
+  background-color: $lightGray2;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.profilecard {
+  margin: 3px;
+  border: 1px solid $darkGray2Alpha3;
+  background-color: $lightGray2;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3vh;
+  border-radius: 10px;
+  /* border: 2px dashed #fff; */
+
+  > {
+    .profileimg {
+      margin-top: 50px;
+      max-width: 90%;
+      min-width: 170px;
+      min-height: 170px;
+      width: 15vw;
+      height: 15vw;
+      border: 2px solid $darkGray2Alpha3;
+      background-color: $lightGray1;
+      overflow: hidden;
+      justify-content: center;
+      border-radius: 40px;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    p {
+      margin-top: 1.5vh;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &:nth-child(4) > a {
+        margin: 0px 0.5rem;
+        background-color: #fff;
+        padding: .2rem .4rem;
+        border-radius: 3px;
+      }
+
+      &:nth-child(3){
+        > a {
+          display: flex;
+          align-items: center;
+          padding-bottom: 5px;
+        }
+
+        img {
+          height: 1.5rem;
+          margin-right: 5px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &:nth-child(4), &:nth-child(5){
+        padding-bottom: 5px;
+      } 
+    }
+  }
+}
+
+.MyTradeWrapper{
+  padding: 10px;
+    >p:nth-child(1){
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: $purple1Alpha4;
+    font-size: 1.3rem;
+  }
+
+}
+.MyTradePos{
+  display: flex;
+  position: relative;
+  padding-top: 10px;
+  font-size: 1.1rem;
+  >p:nth-child(2){
+    padding-top: 15px;
+    // padding-bottom: 10px;
+    // padding-left: 10px;
+    // position: absolute;
+    // top: 3vh;
+    // left: 60px;
+  }
+  >p:nth-child(3){
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    position: absolute;
+    top: 3vh;
+    left: 61px;
+    font-size: 1rem;
+  }
+
+
+  
+  .MyTradeGood, .MyTradeDislike{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .MyTradeDislike{
+    margin:10px 30px 0 0;
+  }
+  .MyTradeGood{
+    margin:10px 100px 0 0;
+      button{
+        border: 0;
+        outline: 0; 
+        background-color: $bluePurple3Alpha35;
+        border-radius: 5px;
+        margin: 10px;
+        width: 100px;
+        height: 30px;
+    }
+  }
+
+  .MyTradeGood,.MyTradeDislike{
+    .MyTradeImg{
+      margin: 0px auto;
+      position: relative;
+    }
+  }
+    .MyTradeImg2{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: none;
+     }
+     .MyTradeImg3{
+      position: absolute;
+      top: 0px;
+      left: -80px;
+     }
+  .MyTradeDislike:hover .MyTradeImg2, .MyTradeGood:hover .MyTradeImg2 {
+      display: block;
+  }
+}
+
+.MyTradeGood, .MyTradeDislike, .MyTradeImg{
+  img{
+    padding: 10px;
+    height: 80px;
+    max-width: 40%;
+    min-width: 80px;
+    min-height: 50px;
+    border-radius: 15px;
+  }
+}
+
+
+.profilecard > .logout{
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0px 0.5rem;
+  margin-top: 1.1rem;
+  padding: .2rem .4rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(162, 154, 216, 0.4);
+  border-radius: 8px;
+  color: #222;
+  cursor: pointer;
+  &:hover{
+    background-color: rgba(134, 121, 217, 0.4);
+  }
+}
+
+.profileinfo {
+  text-align: center;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+.changememberinfo, .mywrite{
+  background-color: $lightGray2;
+  border-radius: 10px;
+  margin: 0px 5px 5px 5px;
+  cursor: pointer;
+  >p:nth-child(1){
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: $purple1Alpha4;
+    font-size: 1.3rem;
+  }
+  >p:nth-child(2), >p:nth-child(3), >p:nth-child(4), >p:nth-child(5){
+    padding: 10px;
+  }
+  p{
+    padding: 10px;
+  }
+}
+
+.changememberinfo{
+  margin-top: 5px;
+}
+
+.mywriteview{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 5px;
+  margin: 0px 5px 5px 5px;
+}
+.MyTradeName{
+  font-size: 1rem;
+  padding-top: 15px;
+}
+
+
+.MyTradeDone{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+.MyTradeDone{
+  margin: 20px 50px 0 0;
+    button{
+      border: 0;
+      outline: 0; 
+      background-color: $bluePurple3Alpha35;
+      border-radius: 5px;
+      margin: 10px;
+      width: 100px;
+      height: 30px;
+  }
+}
+.myTradeBtn{
+  border: 0;
+  outline: 0; 
+  background-color: $bluePurple3Alpha35;
+  border-radius: 5px;
+  width: 4vw;
+  height: 3vh;
+}
+
+
+
+// @media screen and (min-width: 901px) and (max-width: 1200px) {
+
+//   .maincenter{
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: 1fr;
+//   grid-auto-rows: 1fr;
+//   }
+
+//   .mainmain{
+//     // padding-top: 116px;
+//   }
+// }
+// @media screen and (min-width: 801px) and (max-width: 900px) {
+
+//   .memberinfomain{
+//     padding-top: 116px;
+//   }
+// }
+
+
+@media screen and (min-width: 801px) and (max-width: 1500px) {
+  .MyTradeDone{
+    margin: 20px 30px 0 0;
+      button{
+        margin: 10px;
+        width: 100px;
+        height: 30px;
+    }
+  }
+  .MyTradeName{
+    display: inline-block; 
+    width: 170px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+}
+.myTradeBtn{
+  width: 6vw;
+  height: 2.5vh;
+}
+// @media screen and (min-width: 768px) and (max-width: 1023px){
+//   .MyTradeDone{
+//     margin: 20px 30px 0 0;
+//       button{
+//         margin: 10px;
+//         width: 100px;
+//         height: 30px;
+//     }
+//   }
+//   .MyTradeName{
+//     display: inline-block; 
+//     width: 150px; 
+//     white-space: nowrap; 
+//     overflow: hidden; 
+//     text-overflow: ellipsis;
+//   }
+// }
+
+@media screen and (max-width:800px) {
+  .MyTradeDone{
+    margin: 20px 30px 0 0;
+      button{
+        margin: 10px;
+        width: 100px;
+        height: 30px;
+    }
+  }
+  .MyTradeName{
+    display: inline-block; 
+    width: 170px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+  .myTradeBtn{
+    width: 8vw;
+    height: 2vh;
+  }
+  header{
+    /* min-width: 300px; */
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  header > .search{
+    max-width:90%;
+    overflow: hidden;
+  }
+
+  .memberinfomain{
+    width: 96vw;
+    padding-left: 4vw;
+    // padding-top: 116px;
+    min-height: 800px;
+    height: max-content;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px, auto) 1fr;
+    grid-template-areas: 
+      "left"
+      "center";
+  }
+  main > .memberinfoheader{
+    min-height: 200px;
+    grid-area: left;
+  }
+  main > .memberinfocenter{
+  grid-area: center;
+  }
+
+  .pfImgChange{
+    .pfImgForm{
+      flex-direction: column;
+    }
+    input{
+      width: 50vw;
+    }
+  }
+}
+.infoCurrentNick {
+  font-weight: 600;
+}
+.infoNewNick {
+  margin-top: 30px;
+  font-weight: 600;
+}
+.unReg {
+  background-color: $lightGray2;
+  border-radius: 10px;
+  margin: 0px 5px 5px 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.profileinfo {
+  line-height: 26px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.pfImgPreview{
+  margin-left: 10%;
+  max-width: 80%;
+}
+.infoResetNick_container {
+  white-space:nowrap;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: rgba(177, 177, 177, 0.3);
+    width: 60%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  button {
+    width: 20%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+}
+.infoNewNickMsg {
+  font-size: 12px;
+  padding-left: 6px;
+  color: gray;
+}
+.infoNewNickChangeBtnOut {
+  text-align: right;
+  margin-top: 30px;
+}
+.infoResetPwd_container {
+  white-space:nowrap;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  div {
+    padding-left: 10px;
+  }
+
+  .pwd_current {
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+  }
+  .pwd_change_ck {
+    margin: 40px 0 10px 0;
+    font-weight: 600;
+  }
+  .pwd_change_ck2 {
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+  }
+
+  input {
+    // margin-right: 10px;
+    border-radius: 8px;
+    background-color: rgba(177, 177, 177, 0.3);
+    width: 70%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  button {
+    width: 20%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+  .pwd_change_yes {
+    margin-top: 30px;
+    text-align: right;
+  }
+}
+.pwd_hint, .pwd_hint2 {
+  color: gray;
+  font-size: 12px;
+}
+.infoResetEmail_container {
+  white-space:nowrap;
+  padding: 40px 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .currentEmail, .email_new {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .email_new {
+    margin-top: 50px;
+  }
+  input {
+    border-radius: 8px;
+    background-color: rgba(177, 177, 177, 0.3);
+    width: 70%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  button {
+    width: 20%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+  .email_hint {
+    color: gray;
+    font-size: 12px;
+  }
+  .email_change_yes {
+    text-align: right;
+    margin: 40px 0 10px 0; 
+  }
+}
+.infoResetAd_container {
+  white-space:nowrap;
+  padding: 40px 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  .current_Ad {
+    text-align: center;
+  }
+  .infoReceiveAd {
+    font-weight: 600;
+  }
+  .infoResetAd {
+    margin: 50px 0 40px 0;
+    text-align: center;
+
+    label {
+      margin: 0 20px 0 20px;
+    }
+  }
+  .infoResetAdMsg {
+    text-align: center;
+    font-size: 12px;
+  }
+  .ad_change_yes {
+    text-align: right;
+    margin: 20px 0 10px 0;
+  }
+
+  button {
+    width: 20%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+}
+.infoResetIntro_container {
+  white-space: nowrap;
+  padding: 20px 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .infoCurrentIntroduce, .infoNewIntro {
+    font-weight: 600;
+  }
+  .infoCurrentIntroInner{
+    margin: 10px 0 20px 0;
+    width: 100%;
+
+    span {
+      white-space: normal;
+      line-height: 22px;
+    }
+  }
+  .infoNewIntro {
+    margin: 20px 0 10px 0;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(177, 177, 177, 0.3);
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .infoNewIntroMsg {
+    color: gray;
+    font-size: 12px;
+    text-align: right;
+  }
+  .infoResetIntroBtn {
+    text-align: right;
+    margin: 20px 0 10px 0;
+  }
+  button {
+    width: 20%;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+}
+
+.infoResetPfImg_container {
+  white-space: nowrap;
+  padding: 20px 10px 0 20px;
+  flex-direction: column;
+
+  .infoResetPfImg {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    text-align: center;
+
+    button {
+      width: 70%;
+      height: 34px;
+      border: 2px solid rgba(255, 252, 226, 0.5);
+      // background-color: rgba(162, 154, 216, 0.4);
+      background-color: rgba(253, 218, 110, 0.699); 
+      border-radius: 8px;
+      cursor: pointer;
+      color: rgb(95, 95, 95);
+      font-weight: 600;
+  
+      &:hover {
+        background-color: rgba(255, 205, 56, 0.699); 
+      }
+    }
+  }
+  .infoResetPfImgSpan {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .infoProfileImg {
+    width: 150px;
+    cursor: pointer;
+  }
+  .infoImgName {
+    font-size: 14px;
+  }
+  .infoProfileImgPreviewOut {
+
+  }
+  .infoProfileImgPreview {
+    width: 150px;
+    margin: 20px 0 0 80px;
+  }
+  .infoImgMsg {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 600;
+    color: gray;
+    margin: 10px 0 10px 0;
+  }
+  .infoPfImgChangeBtnOut {
+    text-align: right;
+    margin: 60px 0 0 0;
+
+    button {
+      width: 20%;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background-color: rgba(162, 154, 216, 0.4);
+      border-radius: 8px;
+      cursor: pointer;
+      color: #222;
+      font-weight: 600;
+  
+      &:hover {
+        background-color: rgba(134, 121, 217, 0.4);
+      }
+    }
+  }
+}
+
+.unReg{
+  >p{
+    margin-bottom: 10px;
+  }
+  .cry{
+    background-image: url("../resources/cry3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.memberDelete{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  >p{
+    font-size: 14px;
+    color: rgb(255, 125, 125);
+    padding-bottom: 5px;
+  }
+  .memberDeleteErr{
+    color: gray;
+    font-size: 12px;
+    white-space: pre-line;
+    text-align: center;
+  }
+  input{
+    margin-top: 6px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    background-color: rgba(177, 177, 177, 0.3);
+    padding-left: 5px;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  button{
+    width: max-content;
+    padding: 0px 5px;
+    height: 34px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(162, 154, 216, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(134, 121, 217, 0.4);
+    }
+  }
+}
+
+@media screen and (max-width:456px) {
+  .infoResetPfImg {
+    .infoProfileImg{
+      margin: 0px 40px;
+    }
+    .infoProfileImgPreview {
+      margin: 60px 0px 0px 0px;
+    }
+  }
+  .myTradeBtn{
+    width: 13vw;
+    height: 3.5vh;
+  }
+
+  .infoResetPfImg {
+    .infoProfileImg{
+      margin: 0px 40px;
+    }
+    .infoProfileImgPreview {
+      margin: 60px 0px 0px 0px;
+    }
+  }
+  .MyTradeDone{
+    margin: 20px 10px 0 0;
+      button{
+        margin: 10px;
+        width: 90px;
+        height: 30px;
+    }
+  }
+  .MyTradeName{
+    display: inline-block; 
+    width: 100px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  }
+  .MyTradeGood,.MyTradeDislike{
+    .MyTradeImg{
+      margin: 0px auto;
+      position: relative;
+    }
+  }
+    .MyTradeImg2{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: none;
+     }
+     .MyTradePos{
+     .MyTradeImg3{
+      position: absolute;
+      top: 0px;
+      left: -70px;
+     }
+    }
+  .MyTradeGood, .MyTradeDislike{
+    img{
+      padding: 10px;
+      height: 70px;
+      min-width: 70px;
+      border-radius: 15px;
+    }
+  }
+}
+
+
+.pfImgChange{
+  white-space:nowrap;
+  background-color: $lightGray2;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input{
+    font-family: 'Jua', sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    // border: 2px solid rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+    // padding: 10px;
+    // color: #fff;
+    background-color: $lightGray1Alpha8;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 300px;
+  }
+
+  input[type=file]::file-selector-button{
+    font-family: 'Jua', sans-serif;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    // margin-top: 10px;
+    padding: 10px;
+    // color: #fff;
+    background-color: rgba(242, 182, 210, 0.3);
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(242, 182, 210, 1);
+      // border: 2px solid rgba(255, 78, 161, 0.6);
+    }
+  }
+  button{
+    font-size: 1rem;
+    font-family: 'Jua', sans-serif;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+    // color: #fff;
+    background-color: rgba(242, 182, 210, 0.3);
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(242, 182, 210, 1);
+      // border: 2px solid rgba(255, 78, 161, 0.6);
+    }
+  }
+}
+
+.pfImgForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:767px) {
+  .mobileFooter{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-top: 1px solid #e3e9ed;
+    span, a{
+      padding: 10px
+    }
+  }  
+}
+

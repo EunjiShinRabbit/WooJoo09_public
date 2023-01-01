@@ -1,0 +1,1163 @@
+@import "color.scss";
+@import "common.scss";
+
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{
+    font-family: 'S-CoreDream-3Light';
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+ 
+  }
+   .chatLeft, .chatPageLeft{
+        width: 30%;
+        height: 100vh;
+        float: left;
+        background-color: $lightGray1Alpha8;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Firefox */
+   }
+   .chatLeft::-webkit-scrollbar, .chatPageLeft::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}   
+
+.chatSendFile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    >div{
+        display: flex;
+        flex-direction: row;
+        >form{
+            display: flex;
+            align-items: flex-end;
+            p{
+                margin-bottom: 10px;
+            }
+            button{
+                margin-left: 5px;
+                margin-bottom: 5px;
+                width: 7vw;
+                height: 4vh;
+                border: 0;
+                outline: 0; 
+                background-color: $purple2Alpha3;
+                border-radius: 5px;
+        
+            }
+        }
+    }
+    img{
+        width: 150px;
+        height: 130px;
+    }
+    >button{
+            width: 4vw;
+            height: 5vh;
+            border: 0;
+            outline: 0; 
+            background-color: $purple2Alpha3;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 0.95rem;
+    
+    }
+}
+.chatSendImgPre{
+    font-size: .9rem;
+}
+.chatImg{
+    width: 150px;
+    height: 150px;
+}
+
+
+.chatButton{
+    width: 100%;
+    height: 10vh;
+    border-radius: 5px;
+    // background-color: $lightGray1Alpha6;
+    position: relative;
+    padding: 2%;
+    cursor: pointer;
+    div{
+        position: absolute;
+        left: 114px; 
+        top: 45px;
+        // display: flex;
+        // flex-direction: column;
+    }
+  }
+  a{
+    text-decoration: none; // 밑줄 제거
+    color: inherit; // 색상 제거
+  }
+ 
+
+  .chatButton:hover{
+    background-color: $darkGray2Alpha3;
+  }
+
+.chatList{
+    margin :30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    img{
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        // justify-content: center;
+        // align-items: center;
+        // position:fixed;
+        // bottom:0; 
+        // left: 15%;
+        // transform:  translateX( -50% );
+    }
+    // position: relative;
+}
+
+.chatDetail{
+    height: 13vh;
+    // padding-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: relative;
+    span > img{
+        width: 80px;
+        height: 60px;
+        margin: 0 5px 0 5px;
+        border-radius: 10px;
+        background-color: rgba(134, 121, 217, 0.1);
+    }
+    .chatButton > span{
+        display: absolute;
+        // left: -16%; 
+        top : 4.5vh;
+    }
+    p{
+        display: flex;
+    }
+    // p{
+    //     // padding-top: 1%;
+    //     display: flex;
+    // }
+    .chatDetailNick{
+        // display: absolute;
+        padding-top : 5px;
+        padding-left: 15px;
+        display: flex;
+        width: 250vw;
+        height: 10px;
+        // top: 5px;
+        // left: 80px;
+    }
+    
+}
+.chatTime{
+    // height: 10vh;
+    position: absolute;
+    left: 70%;
+    top: 2vh;
+    font-size: .8rem;
+}
+
+.chatting{
+    font-size: 2.5rem;
+    text-align: center;
+    width: 70%;
+    height: 100vh;
+    float: right;
+    background-color:$bluePurple3Alpha35;
+
+    //vertical-align: middle; // 세로정렬
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+    // display: grid;
+
+        img{
+            width: 25%;
+
+          }
+          .chatListRight{
+            position:absolute;
+            top:40%;
+            left:50%;
+            // margin-top:-20px;
+            margin-left:-40%;
+          
+          }
+}
+
+
+.chatAlert{
+    width: 150px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $yellow3;
+    // top: 2vh;
+    // left: 60%;
+  
+    // margin-left: 45%;
+    // margin-top: 30px;
+
+}
+.chatRight{
+    // overflow-y: auto;
+    width: 70%;
+    float: right;
+
+
+}
+.chatStart{
+    color: white; 
+    word-break:break-all;
+    overflow: hidden;
+    
+}
+
+.chatNickname{
+    height: 40px;
+    background-color: $bluePurple3Alpha35 ;
+    display: flex;
+    border-top-left-radius : 5px;
+    border-top-right-radius : 5px;
+    height:40px;
+    width:70%;
+    position:fixed;
+    top:0;
+    span{
+        margin-left: 35px;
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+}
+
+.chatStateWait, .chatStatejoin, .chatStatedone{
+    width: 3vw;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+    margin-left : 2vw;
+}
+.chatStateWait{
+    background-color: $lightGray2;
+}
+
+.chatStatejoin{
+    background-color: $yellow3;
+}
+.chatStatedone{
+    background-color: $lightGray1Alpha6;
+}
+
+.chattingProduct{
+    border-bottom: 1px solid $darkGray2Alpha3;
+    height:90px;
+    width:70%;
+    position:fixed;
+    top:5vh;
+
+    img{
+        width: 70px;
+        height: 60px;
+        // 시계방향 : 위 오 아 왼
+        margin: 15px 20px 10px 20px ;
+        // margin-left: 35%;
+        background-color: rgba(134, 121, 217, 0.1);
+        border-radius: 10px;
+    }
+    div{
+        display: flex;
+        width:100%;
+    }
+}
+.chatProInfo{
+    width: 60%;
+    position: relative;
+.chatProductName{
+    position: absolute;
+    left: 0.5vw;
+    top : 20px;
+    // height: 30px;
+    // width: auto;
+}
+.chatPrice{
+    position: absolute;
+    left: 0.6vw;
+    top : 50px;
+}
+}
+.chatContent{
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+    height: calc(100vh - 350px);
+    margin : 133px 0px 0px 0px ;
+    width: 100%;
+    position: relative ;
+}
+.chatContent::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}   
+
+.chatSend{
+    position:fixed;
+    right:50;
+    bottom:0;
+    z-index:10000;
+    width: 64%;
+    height: 5vh;
+    margin: 20px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+    background-color: $lightGray1Alpha8;
+    padding-left: 2%;
+   
+}
+.sendPrivacy{
+    // display: flex;
+    // justify-content: center;
+    position :fixed;
+    // right:40;
+    bottom:180px;
+    background-color: $lightGray2;
+    width: 70%;
+    // height: auto;
+    
+}
+
+.chatSell{
+    border-top: 1px solid $darkGray2Alpha3;
+    display: flex;
+    justify-content: center;
+    height:145px;
+    width:70%;
+    position:fixed;
+    bottom:20px;
+    // position :fixed;
+    // bottom:10vh;
+  
+    button{
+        border: 0;
+        outline: 0; 
+        background-color: $bluePurple3Alpha35;
+        border-radius: 5px;
+        margin: 10px;
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+     
+    }
+    button:active{
+        background-color: $yellow1;
+    }
+}
+.chatBottom {
+    border-top: 1px solid $darkGray2Alpha3;
+    height:100px;
+    width:70%;
+    position:fixed;
+    bottom:0;
+
+    // position: relative;
+    // bottom: 50;
+    button{
+        // width: 10px;
+        // height: 10px;
+        border: 0;
+        outline: 0; 
+        cursor: pointer;
+    }
+    img{
+        position:fixed;
+        width: 43px;
+        height: 43px;
+        margin: 25px;
+        z-index:10000;
+        right:0;
+        bottom:0;
+    }
+}
+.sendAccount, .sendDelivery{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    >div{
+        margin-right: 5px;
+    }
+
+    select{
+        border-radius: 5px;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    input{
+        width: 10vw;
+        height: 3vh;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        background-color: $lightGray1Alpha8;
+        padding-left: 10px;
+        margin: 5px;
+    }
+    button{
+        width: 5vw;
+        height: 3vh;
+        border: 0;
+        outline: 0; 
+        background-color: $purple2Alpha3;
+        border-radius: 5px;
+        margin: 5px;
+    }
+}
+.sendFile{
+    margin-top: 10px;
+    button{
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 5px;
+        background-color: $purple2Alpha3;
+        padding: 2px 5px 2px 5px;
+        border: 0;
+        outline: none;
+      }
+}
+
+.chatDate{
+    // width: 250px;
+    // height: 30px;
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 60%;
+    // background-color:$darkGray1;
+}
+
+.chatMessage{
+    padding : 15px;
+    width: 12vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    margin-left: 7%;
+    margin-top: 20px;
+    background-color: $lightGray1Alpha5;
+    border: 1px solid $lightPurple4Alpha5 ;
+}
+
+
+.chatMessage-My{
+    padding : 15px;
+    width: 12vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+    margin-left: 70%;
+    margin-top: 20px;
+    background-color: $lightPurple4Alpha5;
+}
+.chatTalkWrap{
+    position: relative;
+}
+.chatTalkTime{
+    position: absolute;
+    left : 17.3vw;
+    bottom : 1px;
+    font-size: .8rem;
+
+}
+.chatTalkTime-My{
+    position: absolute;
+    right : 21.5vw;
+    bottom : 1px;
+    font-size: .8rem;
+}
+
+.chatContainer{
+    display: flex;
+}
+
+.memberinfomain{
+    padding-top:130px;
+}
+
+.PartAcceptBtn{
+    width: 100%;
+    button{
+        cursor: pointer;
+        margin: 5px;
+        border: 0;
+        outline: 0;
+        background-color: $purple2Alpha3;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 530;
+        width: 100px;
+        height: 40px;
+        left: 43vw;
+        top : 2vh;
+        position: relative;
+    }
+    button:hover{
+        background-color: $purple1Alpha4;
+    }
+    p{
+        position: absolute;
+        top : 70px;
+        left : 37.5vw;
+        font-size: .9rem;
+        // right : 0;
+    }
+}
+.PartAcceptBtn2{
+    button{
+        cursor: pointer;
+        margin: 5px;
+        border: 0;
+        outline: 0;
+        background-color: $purple2Alpha3;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 530;
+        width: 100px;
+        height: 40px;
+        left: 43vw;
+        top : 2vh;
+        position: relative;
+    }
+    button:hover{
+        background-color: $purple1Alpha4;
+    }
+    p{
+        position: absolute;
+        top : 70px;
+        left : 35.5vw;
+        font-size: .9rem;
+        // right : 0;
+    }
+}
+.chatWriteImgInput{
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+    // .chatContainer{
+    //     flex-direction: column;
+    // }
+    .chatList{
+        font-size: 1.3rem;
+    }
+    .chatLeft{
+        width: 30%;
+        height: 100vh;
+   }
+   .chatDetail{
+    margin: 1%;
+    height: 12vh;
+    padding: 1%;
+    font-size: 1rem;
+    img{
+    
+        img{
+            width: 4vw;
+            height: 8vh;
+            margin: 25px 20px 10px 20px ;
+            // margin-left: 35%;
+        }
+    }
+    p{
+        // display: flex;
+    }
+}
+    .chatButton{
+        width: 100%;
+        height: 10vh;
+        border-radius: 5px;
+        padding: 1%;
+        .chatDetailNick{
+            // display: absolute;
+            padding-top : 7px;
+            padding-left: 1%;
+            display: flex;
+            width: 250vw;
+            height: 10px;
+            // top: 5px;
+            // left: 80px;
+            font-size: .9rem;
+        }
+        div{
+            left: 100px;
+            top : 40px;
+            font-size : .9rem; 
+        }
+    }
+    .chatTime{
+        left: 62%;
+        font-size: .7rem;
+    }
+    .chatSend{
+        width: 63%;
+    }
+    .chatStateWait, .chatStatejoin, .chatStatedone{
+        width: 5vw;
+        height: 30px;
+    }
+    .chatBottom {
+        height: 80px;
+        img{
+            margin : 18px 13px 18px 0px;
+            width: 38px;
+            height: 38px;
+        }
+    }
+    .chatContent{
+        margin : 133px 0px 0px 0px ;
+
+    }
+    .chatProductName, .chatPrice{
+        font-size: .95rem;
+    }
+    .chattingProduct{
+        img{
+            margin: 15px 15px 10px, 15px;
+        }
+    }
+    .PartAcceptBtn{
+        left: 32.5vw;
+        top : 20px;
+        width: 85px;
+        height: 35px;
+        p{
+         left : 26.5vw;
+         font-size: .8rem;
+        }
+        button{
+            left: 32.5vw;
+            top : 20px;
+            width: 85px;
+            height: 35px;
+        }
+    }
+    .chatMessage-My{
+        padding : 15px;
+        width: 18vw;
+        margin-left: 65%;
+        margin-top: 25px;
+    }
+    .chatTalkTime-My{
+        right : 25vw;
+        font-size: .8rem;
+    }
+    .chatMessage{
+        padding : 15px;
+        width: 18vw;
+        margin-left: 6%;
+        margin-top: 20px;
+    }
+    .chatTalkTime{
+        left : 24.6vw;
+    }
+    .chatSell{
+        height:120px;
+    }
+    .PartAcceptBtn2{
+        p{
+            // right:0.3vw;
+            left:26vw;
+            font-size: .8rem;
+        }
+        button{
+            left: 36vw;
+            // right: 20vw;
+            top : 20px;
+            width: 85px;
+            height: 35px;
+        }  
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   .chatDetail{
+    margin:2%;
+    height: 10vh;
+    padding: 1%;
+    font-size: 0.8rem;
+    }
+    .chatAlert{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $yellow3;
+        margin-top: 30px;
+    
+    }
+    .chatContent{
+        .chatDate{
+                margin-top: 21vh;
+            }
+    }
+    .chatSend{
+        width: 61%;
+    }
+    .chatSell{
+        height:15vh;
+        width:70%;
+        position:fixed;
+        bottom:30px;
+        // position :fixed;
+        // bottom:10vh;
+      
+        button{
+            margin: 10px;
+            width: 9.3vw;
+            height: 4.5vh;
+         
+        }
+    }
+    .chattingProduct{
+        img{
+            width: 65px;
+            height: 55px;
+            margin: 18px 10px 5px 10px;
+        }
+        div{
+            font-size: .8rem;
+        }
+    }
+    .chatBottom {
+        height:70px;
+        img{
+            margin : 18px 13px 18px 0px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+    .chatSell{
+        height:90px;
+    }
+    
+    .chatStateWait, .chatStatejoin, .chatStatedone{
+        width: 5.4vw;
+        font-size: 0.95rem;
+
+    }
+    .chatLogo{
+        display: none;
+    }
+    .chatContent{
+        height: calc(100vh - 300px);
+    }
+    .sendPrivacy{
+        bottom:140px;
+    }
+    .chatDetail{
+        span > img{
+            width: 60px;
+            height: 50px;
+            margin: 0 5px 0 5px;
+            border-radius: 8px;
+        }
+    }
+    .chatDetail{
+    .chatDetailNick{
+        padding-left : 3px;
+        font-size: .78rem;
+        }
+    }
+    .chatButton{
+        div{
+            position: absolute;
+            left: 78px; 
+            top: 35px;
+            font-size: .78rem;
+        }
+      }
+      .chatTime{
+        left: 80%;
+        // margin-bottom: 10px;
+        font-size: .6rem;
+        display: inline-block; 
+        width: 30px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        // text-overflow: ellipsis;
+    }
+    .chatAlert{
+        width: 150px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $yellow3;
+        top: 10px;
+        left: 20px;
+    }
+    .chatMessage-My{
+        padding : 15px;
+        width: 20vw;
+        margin-left: 65%;
+        margin-top: 30px;
+        font-size: .9rem;
+    }
+    .chatTalkTime-My{
+        right : 25vw;
+        font-size: .8rem;
+    }
+    .chatMessage{
+        padding : 15px;
+        width: 20vw;
+        margin-left: 6%;
+        margin-top: 30px;
+        font-size: .9rem;
+    }
+    .chatTalkTime{
+        left : 24.6vw;
+    }
+    .PartAcceptBtn{
+        p{
+         left : 30.5vw;
+         font-size: .8rem;
+         top : 60px;
+         width: 200px;
+         display: -webkit-box;
+         -webkit-line-clamp: 2; /* 라인수 */
+         -webkit-box-orient: vertical;
+         word-wrap:break-word; 
+         line-height: 1.1em;
+         height: 2.2em;  
+
+        }
+        button{
+            left: 32.5vw;
+            top : 15px;
+            width: 75px;
+            height: 30px;
+            font-size: .8rem;
+        }
+    }
+    .PartAcceptBtn2{
+        p{
+            left:29vw;
+            font-size: .75rem;
+            top:60px;
+            width: 190px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 라인수 */
+            -webkit-box-orient: vertical;
+            word-wrap:break-word; 
+            line-height: 1.1em;
+            height: 2.2em;  
+        }
+        button{
+            left: 34vw;
+            top : 15px;
+            width: 75px;
+            height: 30px;
+            font-size: .8rem;
+        }  
+    }
+    .chatProInfo{
+        .chatProductName{
+            font-size: .8rem;
+            top: 25px;
+        }
+    }
+    .chatSell{
+        button{
+            font-size: .7rem;
+            width: 9.8vw;
+        }
+    }
+    .sendDelivery{
+        font-size: .9rem;
+    }
+    .sendAccount, .sendDelivery{
+        >div{
+           font-size: .9rem;
+        }
+        >input{
+            width: 12vw;
+        }
+    }
+
+
+}
+@media screen and (max-width:767px) {
+    .chatting{
+        display: none;
+    }
+    .chatLeft{
+        width: 100%;
+    }
+    .chatAlert{
+        width: 50px;
+        height: 10px;
+        border-radius: 50%;
+        top: 10px;
+        left: 20px;
+    }
+    .chatLogo{
+        display: none;
+    }
+    .chatPageLeft{
+        display: none;
+    }
+    .chatRight,.chatNickname,.chattingProduct, 
+    .chatContent, .chatBottom,.chatSell{
+        width: 100%;
+    }
+    .chatSend{
+        width: 80%;
+    }
+    .chatStateWait, .chatStatejoin, .chatStatedone{
+        width: 9vw;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 7px;
+        margin-left : 2vw;
+    }
+    .chattingProduct{
+        img{
+            width: 55px;
+            height: 55px;
+            // 시계방향 : 위 오 아 왼
+            margin: 15px 8px 10px 8px ;
+        }
+        div{
+            display: flex;
+        }
+    }
+    .chatProductName{
+        font-size: .85rem;
+        display: inline-block; 
+        width: 100px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    .chatPrice{
+        font-size: .85rem;
+    }
+    .chatBottom {
+        img{
+            width: 38px;
+            height: 38px;
+            margin: 15px 10px 22px 10px ;
+        }
+    }
+    .chatTalkTime-My{
+        position:relative ;
+        // left: 40vw;
+        right : -43vw;
+        top: -15px;
+        font-size: .8rem;
+    }
+    .sendPrivacy{
+        width: 100%;
+    }
+    .chatMessage-My{
+        padding : 15px;
+        width: 40vw;
+        margin-left: 55%;
+        margin-top: 30px;
+        font-size: .9rem;
+    }
+    .chatTalkTime-My{
+        right : -23vw;
+        font-size: .8rem;
+    }
+    .chatMessage{
+        padding : 15px;
+        width: 40vw;
+        margin-left: 6%;
+        margin-top: 30px;
+        font-size: .9rem;
+    }
+    .chatTalkTime{
+        left : 47vw;
+    }
+    .chatDetail{
+        height: 9vh;
+    }
+    .chatImg{
+        width: 130px;
+        height: 130px;
+    }
+    .chatSell{
+        height: 115px;
+        button{
+        font-size: .6rem;
+        margin:10px 5px 10px 5px;
+        }
+    }
+    .chatBottom{
+        height: 80px;
+    }
+    .chatSendFile{
+        height: 150px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        >button{
+            width: 10vw;
+            height: 4vh;
+            font-size: .7rem;
+        }
+        >div{
+            >form{
+                button{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* 라인수 */
+                    -webkit-box-orient: vertical;
+                    word-wrap:break-word; 
+                    line-height: 1.2em;
+                    height: 2em; 
+                    width: 15vw;
+                    height: 4vh;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+    .chatSendImgPre{
+        font-size: .75rem;
+    }
+    .sendAccount, .sendDelivery{
+        // display: -webkit-box;
+        -webkit-line-clamp: 3; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap:break-word; 
+        line-height: 1.5em;
+        height: 6em; 
+        font-size: .7rem;
+        button{
+            width: 8vw;
+            height: 3vh;
+            font-size: .7rem;
+        }
+        select{
+            width: 80px;
+            height: 30px;
+            font-size: .7rem;
+        }
+        input{
+            width: 20vw;
+            font-size: .7rem;
+        }
+    }
+    .sendPrivacy{
+        bottom:150px;
+    }
+    .PartAcceptBtn{
+        p{
+         left : 30.5vw;
+         font-size: .7rem;
+         top : 55px;
+         width: 200px;
+         display: -webkit-box;
+         -webkit-line-clamp: 2; /* 라인수 */
+         -webkit-box-orient: vertical;
+         word-wrap:break-word; 
+         line-height: 1.1em;
+         height: 2.2em;  
+
+        }
+        button{
+            left: 34.5vw;
+            top : 15px;
+            width: 60px;
+            height: 25px;
+            font-size: .7rem;
+        }
+    }
+    .PartAcceptBtn2{
+        p{
+            left:29vw;
+            font-size: .7rem;
+            top:60px;
+            width: 160px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* 라인수 */
+            -webkit-box-orient: vertical;
+            word-wrap:break-word; 
+            line-height: 1.1em;
+            height: 2.2em;  
+        }
+        button{
+            left: 37vw;
+            top : 15px;
+            width: 75px;
+            height: 30px;
+            font-size: .7rem;
+        }  
+    }
+    .chatDetail{
+        span > img{
+            width: 60px;
+            height: 50px;
+            margin: 0 5px 0 5px;
+            border-radius: 8px;
+        } 
+        .chatDetailNick{
+        padding-left: 10px;
+        padding-top: 3px;
+    }
+    }
+    .chatButton{
+        height: 8vh;
+        div{
+            position: absolute;
+            left: 88px; 
+            top: 40px;
+        }
+      }
+      .chatTime{
+        left: 77%;
+        top:1.4vh;
+        display: inline-block; 
+        width: 40px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+      }
+  
+}
+
+
+   

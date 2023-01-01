@@ -1,0 +1,672 @@
+@import "color.scss";
+
+input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.write{
+  padding-top: 130px;
+  background-color: $lightGray2;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  
+  input{
+    border: none;
+    border-bottom: 1px solid $purple1;
+  }
+  textarea, select{
+    border: solid 1px #e3e9ed;
+    &:focus{
+      outline: none;
+    }
+  }
+  .priceInput{
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+    }
+    span:nth-child(3){
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    >label{
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.representInput, .imgInput{
+  button{
+    background-color: $bluePurple3Alpha35;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: none;
+    &:hover{
+      background-color: $bluePurple3Alpha5;
+    }
+    cursor: pointer;
+  }
+  .imgErr{
+    color: $darkGray2Alpha5;
+  }
+  .imglst{
+    padding: 2px 0px 5px 0px;
+  }
+}
+
+.writeInput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  width: 80vw;
+  background-color: #FFF;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px 0 rgb(72 75 108 / 8%);
+  border: solid 1px #e3e9ed;
+  padding: 30px 20px 30px 20px;
+  margin-bottom: 20px;
+  // background-color: blue;
+
+  >div{
+    margin-bottom: 20px;
+  }
+
+  label{
+    display: flex;
+    flex-direction: row;
+    img{
+      width: 20vw;
+      margin-right: 20px;
+    }
+    >span{
+      
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      width: 20vw;
+      min-width: 130px;
+    }
+  }
+
+  textarea{
+    padding: 5px;
+    width: 70%;
+    height: 20vh;
+    line-height: 150%;
+  }
+}
+
+.writeImgInput{
+  span{
+    padding-bottom: 5px;
+  }
+}
+
+.imgInput{
+  padding-bottom: 15px;
+  border-bottom: solid 1px #e3e9ed;
+}
+
+.representInput, .imgInput{
+  // background-color: red;
+  display: flex;
+  flex-direction: row;
+  label{
+    display: flex;
+    flex-direction: column;
+    img{
+      cursor: pointer;
+    }
+  }
+  .imgPreview{
+    margin: 0px auto;
+    >p{
+      padding-bottom: 5px;
+    }
+    >div{
+      display: grid;
+      grid-auto-rows: 15vw;
+      gap: 3vw;
+      grid-template-columns: repeat(3, 15vw);
+      img{
+        border-radius: 3px;
+        // background-color: $yellow3Alpha4;
+        // padding: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.writeErr, .detailErr, .tradeMethodErr{
+  color: $darkGray2Alpha5;
+  width: 100%;
+  font-size: .9rem;
+}
+
+.detailErr{
+  position: absolute;
+  left: 0px;
+}
+
+.writeSubmitBtn{
+  width: 50%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background-color: $purple2Alpha6;
+  color: #FFF;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 1px 1px 10px 0 rgb(72 75 108 / 8%);
+  border: solid 1px #e3e9ed;
+  &:hover{
+    background-color: $purple2;
+  }
+}
+
+.nobutton{
+  background-color: #e3e9ed;
+  &:hover{
+    background-color: #e3e9ed;
+  }
+}
+
+.writeTitle{
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 40px 0px 20px 0px;
+  padding: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.tradeMethodInput{
+
+  div{
+    label{
+      padding-bottom: 3px;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    label:nth-child(1){
+      min-width: 75px;
+    }
+    label:nth-child(2), label:nth-child(3){
+      min-width: 90px;
+    }
+  }
+  position: relative;
+}
+
+.placeInput{
+  >label{
+    position: relative;
+    >div{
+      width: 70%;
+    }
+  }
+  div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  >div{
+    padding: 10px 10%;
+    max-width: 1000px;
+    // background-color: royalblue;
+    display: flex;
+    justify-content: center;
+  }
+  input{
+    min-width: 120px;
+    width: 80%;
+    max-width: 400px;
+  }
+  button{
+    background-color: $bluePurple1Alpha8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    &:hover{
+      background-color: $bluePurple1;
+    }
+  }
+  .closemapbtn{
+    position: absolute;
+    bottom: -150%;
+    z-index: 10;
+    left: 11%
+  }
+}
+
+.dueDateInput{
+  div{
+    span{
+      color: $purple1;
+    }
+  }
+}
+
+.productDetailInput{
+  position: relative;
+  .writecontentlength{
+    position: absolute;
+    right: 3.2vw;
+    bottom: -14px;
+    color: $darkGray2Alpha3;
+  }
+  >label{
+    padding-bottom: 3px;
+  }
+}
+
+.essential2, .essential3, .essential5, .essential6, .essential7, .essential8{
+  font-size: 1rem;
+  color: $purple1;
+  position: absolute;
+  top: -6px;
+}
+.essential52{
+  font-size: 1rem;
+  color: $purple1;
+  position: absolute;
+  top: 70px;
+}
+.essential2{
+  left: 40px;
+}
+.essential3{
+  left: 58.5px;
+}
+.essential5, .essential52{
+  left: 82px;
+}
+.essential6{
+  left: 101px;
+}
+.essential7{
+  left: 120px;
+}
+.essential8{
+  left: 122px;
+}
+
+.categoryInput, .loactionInput, .countPartnerInput{
+  select{
+    font-size: 1rem;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+    border-radius: 5px;
+  }
+  // /* check, hover 스타일 설정 IE, Chrome */
+  // select option:checked,
+  // select option:hover {
+  // background: $purple1;
+  // color: #fff;
+  // }
+  // /* check, hover 스타일 설정 FireFox */
+  // select option:checked,
+  // select option:hover {
+  // box-shadow: 0 0 10px 100px $purple1 inset;
+  // color: #fff;
+  // }
+}
+
+.dueDateInput{
+  >label{
+    display: flex;
+    >div{
+      flex-direction: row;
+      flex-wrap: wrap;
+      >input{
+        padding-left: 13%;
+        width: 32%;
+      }
+    }
+  }
+}
+.nameInput{
+  >label{
+    padding-bottom: 3px;
+  }
+  input{
+    width: 60%;
+  }
+}
+
+.priceInput{
+  input{
+    text-align: center;
+    min-width: 100px;
+    width: 40%;
+    max-width: 200px;
+  } 
+}
+
+
+@media screen and (max-width:767px) {
+
+  .placeInput{
+    .closemapbtn{
+      position: absolute;
+      bottom: -150%;
+      z-index: 10;
+      right: 10%;
+      width: fit-content;
+    }
+  }
+
+  .nameInput{
+    >label{
+      padding-bottom: 3px;
+    }
+    input{
+      min-width: none;
+      width: 100%;
+      max-width: 450px;
+    }
+  }
+
+  .writeErr, .detailErr, .tradeMethodErr{
+    color: $darkGray2Alpha5;
+    width: 100%;
+    font-size: .9rem;
+  }  
+ 
+  .categoryInput, .loactionInput, .countPartnerInput{
+    select{
+      font-size: .9rem;
+    }
+  }  
+  
+  .essential2, .essential3, .essential6, .essential7, .essential8, .essential52{
+    // font-size: 1rem;
+    // color: $purple1;
+    // position: absolute;
+    top: -6px;
+  }
+  .essential52{
+    font-size: 1rem;
+    color: $purple1;
+    position: absolute;
+    top: 71px;
+  }
+  .essential2{
+    left: 37px;
+  }
+  .essential3{
+    left: 54px;
+  }
+  .essential5, .essential52{
+    left: 75px;
+  }
+
+  .essential6{
+    left: 92px;
+  }
+  .essential7{
+    left: 110px;
+  }
+  .essential8{
+    left: 113px;
+  }
+  
+  .productDetailInput{
+    position: relative;
+    width: 100%;
+    .writecontentlength{
+      position: absolute;
+      right: 8%;
+      bottom: -14px;
+    }
+  }
+  
+  .write{
+    padding-top: 150px;
+
+    .priceInput{
+      span:nth-child(3){
+        font-size: 1rem !important;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .writeInput{
+    width: 96vw;
+  }
+
+  label{
+    >span{
+      font-size: 1.1rem !important;
+    }
+  }
+
+  .representInput, .imgInput{
+    .imgPreview{
+      >div{
+        display: grid;
+        grid-auto-rows: 20vw;
+        grid-template-columns: repeat(3, 20vw);
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .dueDateInput{
+    >label{
+      display: flex;
+      >div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        >input:nth-child(1){
+          padding-left: 16%;
+          width: 40%;
+        }
+        >input:nth-child(3){
+          padding-left: 11%;
+          width: 25%;
+        }
+        >input:nth-child(5){
+          padding-left: 11%;
+          width: 25%;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .placeInput{
+    >label{
+      width: 110%;
+      input{
+        max-width: 200px;
+      }
+    }
+    .closemapbtn{
+      position: absolute;
+      bottom: -150%;
+      z-index: 10;
+      left: 5%;
+      width: fit-content;
+    }
+  }
+  
+  .detailErr{
+    position: absolute;
+    left: 0px;
+    bottom: -14px;
+  }
+
+  .essential5{
+    top: -0px;
+  }
+
+  .dueDateInput{
+    >label{
+      display: flex;
+      >div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        >input:nth-child(1){
+          padding-left: 15%;
+          width: 40%;
+        }
+        >input:nth-child(3){
+          padding-left: 10%;
+          width: 25%;
+        }
+        >input:nth-child(5){
+          padding-left: 10%;
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  .essential52{
+    font-size: 1rem;
+    color: $purple1;
+    position: absolute;
+    top: -10px;
+  }
+
+  .writeErr, .detailErr, .tradeMethodErr{
+    color: $darkGray2Alpha5;
+    width: 100%;
+    font-size: .8rem;
+  }  
+ 
+  .productDetailInput{
+    display: flex;
+    >label{
+      width: 100%;
+      flex-direction: column;
+      textarea{
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+    position: relative;
+    width: 100%;
+    .writecontentlength{
+      position: absolute;
+      right: .5%;
+      bottom: -12px;
+      font-size: .8rem;
+    }
+  }
+  
+  .representInput, .imgInput{
+    .imgPreview{
+      >div{
+        display: grid;
+        grid-auto-rows: 22vw;
+        gap: 3vw;
+        grid-template-columns: repeat(2, 22vw);
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .placeInput{
+    div{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    >div{
+      padding: 10px 5%;
+      // background-color: royalblue;
+      display: flex;
+      justify-content: center;
+  
+    }
+  }
+  
+
+}
+@media screen and (max-width:430px) {
+  .placeInput{
+    .closemapbtn{
+      position: absolute;
+      bottom: -80%;
+      z-index: 10;
+      left: 2%;
+    }
+    .resetmapbtn{
+      position: relative;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width:390px) {
+
+  .dueDateInput{
+    >label{
+      display: flex;
+      >div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        >input:nth-child(1){
+          padding-left: 5px;
+          width: 37%;
+        }
+        >input:nth-child(3){
+          padding-left: 5px;
+          width: 26%;
+        }
+        >input:nth-child(5){
+          padding-left: 5px;
+          width: 26%;
+        }
+      }
+    }
+  }
+
+  .placeInput{
+    div{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    >div{
+      padding: 10px 0%;
+      // background-color: royalblue;
+      display: flex;
+      justify-content: center;
+  
+    }
+  }
+}

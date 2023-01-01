@@ -1,0 +1,29 @@
+.termWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 200px;
+}
+.term {
+    width: 70%;
+    margin-bottom: 100px;
+}
+.termBoxOut {
+    width: 100%;
+    background-color: #a3a5d91a;
+    border-radius: 10px;
+    
+}
+.termBoxInner {
+    line-height: 24px;
+    margin-top: 80px;
+    padding: 30px;
+}
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+.termDate {
+    text-align: right;
+}

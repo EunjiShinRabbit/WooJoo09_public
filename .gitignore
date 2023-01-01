@@ -1,0 +1,66 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# dependencies
+src/main/woojoo09_front/node_modules
+src/main/node_modules
+src/main/woojoo09_front/.pnp
+src/main/woojoo09_front.pnp.js
+
+# testing
+src/main/woojoo09_front/coverage
+
+# production
+src/main/woojoo09_front/build
+
+# misc
+src/main/woojoo09_front/.DS_Store
+src/main/woojoo09_front/.env.local
+src/main/woojoo09_front/.env.development.local
+src/main/woojoo09_front/.env.test.local
+src/main/woojoo09_front/.env.production.local
+
+src/main/woojoo09_front/npm-debug.log*
+src/main/woojoo09_front/yarn-debug.log*
+src/main/woojoo09_front/yarn-error.log*
+
+# Resources
+src/main/resources/static/static/css/*
+src/main/resources/static/static/js/*
+
+

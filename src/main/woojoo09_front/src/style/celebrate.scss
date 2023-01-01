@@ -1,0 +1,70 @@
+@import "color.scss";
+
+.celWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 200px;
+}
+.celebrate {
+    width: 600px;
+    height: 800px;
+    margin: 20px;
+}
+.celImg, .celMainWrite, .celDetailWrite {
+    text-align: center;
+    margin: 0 auto;
+}
+.celImg {
+    background-image: url("../resources/regcel.png");
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+.celMainWrite {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;    
+    font-weight: 600;
+}
+.celDetailWrite {
+    line-height: 24px;
+    margin: 40px;
+}
+.celLowBox {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+}
+.celLoginBox {
+    width: 120px;
+    margin: 10px;
+
+    button {
+        width: 100%;
+        height: 46px;
+        background-color:#8679D9;
+        border: none;
+        color: white;
+        border-radius: 10px; 
+        font-weight: 600;  
+        cursor: pointer;     
+    }
+}
+.celMainBox {
+    width: 120px;
+    margin: 10px;
+
+    button {
+        width: 100%;
+        height: 46px;
+        background-color: white;
+        border: 1px solid #8679D9;
+        color: #8679D9;  
+        border-radius: 10px;  
+        font-weight: 600;   
+        cursor: pointer;   
+    }
+}

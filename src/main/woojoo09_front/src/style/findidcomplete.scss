@@ -1,0 +1,31 @@
+@import "color.scss";
+
+.findIdCompleteMain {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.findIdCompleteDt {
+    line-height: 24px;
+    margin: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.findIdCompleteLogin {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+
+    button {
+        width: 200px;
+        height: 46px;
+        background-color: #8679D9;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}

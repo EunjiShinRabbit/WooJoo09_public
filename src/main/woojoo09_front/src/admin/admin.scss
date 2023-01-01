@@ -1,0 +1,541 @@
+@import "../style/color.scss";
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.adminWrapper{
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table tr th,
+table tr td {
+  vertical-align: middle;
+}
+caption {
+  text-indent: -9999px;
+  position: absolute;
+}
+button {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+img {
+  vertical-align: middle;
+}
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.tal {
+  text-align: left !important;
+}
+.ml10 {
+  margin-left: 10px;
+}
+
+button, input, select{
+  font-family: 'S-CoreDream-3Light';
+}
+
+input, select{
+  border-radius: 5px;
+}
+select{
+  padding-left: 3px;
+}
+
+.pageselect{
+  margin-left: 10px;
+}
+
+background-image: linear-gradient(rgba(203, 126, 255, 0.5), rgba(106, 203, 255, 0.5));
+background-attachment: fixed;
+background-size: cover;
+
+
+.adminheader {
+  height: 60px;
+  background-color: rgba(163, 106, 255, 0.3);
+  display: flex;
+
+  .headerMenu{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+
+    >button{
+      margin-left: 10px;
+    }
+  }
+  
+  .title{
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .logo{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    img{
+      height: 50px;
+    }
+  }
+}
+
+.sidebar {
+  font-family: 'S-CoreDream-3Light';
+  // padding-top: 20px;
+  width: 250px;
+  height: calc(100% - 60px);
+  position: absolute;
+  top: 60px;
+  background-color: rgba(255,255,255,.2)
+}
+.sidebar > ul {
+  // background: rgba(228, 206, 242, 0.5);
+}
+.sidebar > ul > li {
+  height: 45px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.sidebar > ul > li.show {
+  height: auto;
+}
+.sidebar > ul > li button {
+  font-family: 'S-CoreDream-3Light';
+  width: calc(100% - 14px);
+  height: 45px;
+  padding: 13px 0 13px 75px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0,0,0,.8);
+  text-align: left;
+  position: relative;
+}
+.sidebar > ul > li.show button {
+  background:rgba(163, 106, 255, 0.3);
+  border-radius: 0 20px 20px 0px;
+  color: #fff;
+  font-weight: 600;
+}
+.sidebar > ul > li.show button::after {
+  top: 19px;
+}
+.sidebar > ul > li button::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+.sidebar > ul > li:nth-child(1) button::before {
+  left: 43px;
+}
+.sidebar > ul > li:nth-child(2) button::before {
+  width: 17px;
+  left: 41.5px;
+}
+.sidebar > ul > li:nth-child(3) button::before {
+  height: 14px;
+  left: 41.5px;
+}
+.sidebar > ul > li:nth-child(4) button::before {
+  height: 14px;
+  left: 43px;
+}
+.sidebar > ul > li:nth-child(5) button::before {
+  left: 42.5px;
+}
+.sidebar > ul > li:nth-child(6) button::before {
+  height: 14px;
+  left: 41.5px;
+}
+.sidebar > ul > li:nth-child(7) button::before {
+  left: 40px;
+}
+.sidebar > ul > li:nth-child(8) button::before {
+  left: 43px;
+  margin-top: 2px;
+  background-repeat: no-repeat;
+}
+.sidebar > ul > li:nth-child(9) button::before {
+  left: 40px;
+  background-repeat: no-repeat;
+}
+
+.sidebar > ul > li button::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+.sidebar > ul > li button + .depth2 li a {
+  display: block;
+  padding: 15px 0 15px 75px;
+  font-size: 14px;
+}
+.sidebar > ul > li button + .depth2 li.on a {
+  color: #00778b;
+  font-weight: bold;
+}
+
+.center{
+  margin-left: 250px;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: calc(100vw - 290px);
+  overflow: hidden;
+}
+
+.modalcontainer {
+  /* 모달창 크기 */
+  width: 300px;
+  height: 200px;
+
+  /* 최상단 위치 */
+  // z-index: 100;
+  
+  /* 중앙 배치 */
+  /* top, bottom, left, right 는 브라우저 기준으로 작동한다. */
+  /* translate는 본인의 크기 기준으로 작동한다. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 모달창 디자인 */
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px solid black;
+
+  >p{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 모달창 내부 X버튼 */
+.modalclose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.modalimg{
+  // height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.loginwrapper{
+  padding-top: 100px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input{
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .loginbox{
+    position: absolute;
+    top: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+  }
+
+  button{
+    background-color:rgba(163, 106, 255, 0.3);
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button:hover{
+    background-color:rgba(255, 239, 150, 0.6);
+  }
+}
+
+.topBar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  span{
+    font-size: 16px;
+  }
+}
+
+hr{
+  height: 1px;
+  background-color: rgba(120, 21, 248, 0.7);
+  border : 0;
+}
+
+.searchBar{
+  input{
+    width: 220px;
+  }
+  margin-top: 10px;
+  margin-left: 10px;
+  input{
+    margin-right: 10px;
+  }
+  button{
+    padding: 2px 5px 2px 5px;
+    background-color:rgba(163, 106, 255, 0.3);
+    border-radius: 5px;
+  }
+  button:hover{
+    background-color:rgba(255, 239, 150, 0.6);
+  }
+  margin-bottom: 10px;
+}
+
+.tableWrapper{
+  margin-top: 10px;
+  width: 100%;
+  overflow-x: auto;
+  // overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 20px;
+}
+table{
+  // margin: 0px auto;
+  // margin-bottom: 10px;
+  white-space:nowrap;
+  text-align: center;
+  border-spacing: 10px 20px;
+  border-collapse: separate;
+  
+}
+
+.pagination{
+  width: 300px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+
+  button{
+    padding: 2px 8px 2px 8px;
+    border-radius: 10px;
+    margin: 0px 2px 0px 2px;
+    background: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(163, 106, 255, 0.3);
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+  
+    &[disabled] {
+      background: rgba(128, 128, 128, .2);
+      cursor: revert;
+      transform: revert;
+    }
+  
+    &[aria-current] {
+      background: rgba(255, 239, 150, 0.6);
+      font-weight: bold;
+      cursor: revert;
+      transform: revert;
+    }
+  }
+}
+
+.btnlst{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  button{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: rgba(163, 106, 255, 0.3);
+    padding: 2px 5px 2px 5px;
+  }
+  button:hover{
+    background-color:rgba(255, 239, 150, 0.6);
+  }
+}
+
+}
+
+@media screen and (max-width:767px) {
+  .adminWrapper{
+    min-height: 100vh;
+
+    .adminheader{
+    }
+    .sidebar{
+      width: 100%;
+      height: 180px;
+      overflow-y: scroll;
+      ul{
+        width: 100%;
+      }
+    }
+    .center{
+      margin-left: 0px;
+      margin-top: 180px;
+      width: 100vw;
+      min-height: calc(100vh - 565px);
+    }
+  }
+}

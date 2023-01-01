@@ -1,0 +1,161 @@
+@import "color.scss";
+
+.registerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 200px;
+}
+.register {
+    width: 640px;
+    height: 1000px;
+    margin: 20px;
+    
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+.registerMain {
+    padding-top: 20px;
+}
+.regSmallBox {
+    padding: 20px 20px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr 0.8fr;
+}
+.regSmallTitle {
+    padding-top: 12px;
+}
+.regInputOut {
+    // flex: 1 1 0%;
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+	-webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+    }
+   
+    input {
+        width: 100%;
+        height: 46px;
+        border-radius: 10px;
+        border: 1px solid rgb(221, 221, 221);
+        padding: 0 10px;
+    }
+}
+.regIdOverlap, .regFakeBox {
+    margin-left: 10px;
+    // width: 120px;
+    
+}
+.regIdDupBut, .regNickDupBut, .regGetPhoneCodeBut, .regVerifyCodeOkBut {
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    color: #8679D9;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #8679D9;
+    cursor: pointer; 
+    font-weight: 600;
+}
+.notRegGetPhoneCodeBut, .notRegVerifyCodeOkBut {
+    width: 100%;
+    height: 46px;
+    border-radius: 10px;
+    color: rgb(184, 184, 184);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(184, 184, 184);
+}
+.regBirthOut {
+    display: grid;
+    grid-template-columns: 1.4fr 1.05fr 0.95fr; 
+
+    select {
+        width: 100%;
+        height: 46px;
+        border: 1px solid rgb(221, 221, 221);
+        // color: rgb(112, 112, 112);
+        padding: 0 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+.regBirthYear {
+    margin: 0 10px 0 0;
+}
+.regBirthMonth {
+    margin: 0 10px 0 0;
+}
+.regErrMsg {
+    text-align: right;
+    font-size: 0.7em;
+    color: rgb(156, 156, 156);
+    padding-right: 23%;
+    margin-top: 6px;
+}
+.regPhoneReWriteBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.74em;
+    color: rgb(156, 156, 156);
+    text-decoration: underline;
+    // text-underline-position: under;
+    font-weight: 600;
+    padding-left: 27%;
+    margin-top: 6px;
+}
+.regComplete {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+
+    .regCompleteBut {
+        width: 60%;
+        height: 56px;
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        // background-color: #222;
+        background-color: #8679D9;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .regNotCompleteBut {
+        width: 60%;
+        height: 56px;
+        border-radius: 10px;
+        color: #fff;
+        // background-color: #222;
+        background-color: rgb(184, 184, 184);
+        border: none;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .registerWrapper{
+        // font-size: .8rem;
+        .regSmallBox{
+            .regSmallTitle{
+                display: none;
+            } 
+            display: grid;
+            grid-template-columns: 2.2fr 0.8fr;
+        }
+    }
+    .regErrMsg {
+        padding-right: 30%;
+    }
+    .regPhoneReWriteBtn {
+        padding-left: 6%;
+    }
+}
