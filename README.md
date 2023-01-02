@@ -3,7 +3,7 @@
 
 > 우리 주변의 공동 구매, 공동 구매 중개 플랫폼  
 > http://woojoo09.site/  
-> (구글 플레이스토어 링크)  
+> https://play.google.com/store/apps/details?id=com.woojoo09  
 
 
 
